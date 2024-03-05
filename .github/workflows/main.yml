@@ -23,10 +23,8 @@ jobs:
     # Add steps to install and configure the ODBC driver
     - name: Install SQL Server Native Client 11.0 ODBC Driver
       run: |
-        - name: Install SQL Server Native Client 11.0 ODBC Driver
-          run: |
-            sudo apt update
-            sudo apt install unixodbc unixodbc-dev
+          sudo apt update
+          sudo apt install unixodbc unixodbc-dev
     - name: Configure ODBC Driver
       run: |
         echo "[ODBC Driver 17 for SQL Server]
