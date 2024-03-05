@@ -1,5 +1,14 @@
-from app.db import db 
+# from app.db import db 
+# import pyodbc
+
 import pyodbc
+cnxn_str = ("Driver={SQL Server Native Client 11.0};"
+            "Server=auspwdgadb05.aus.amer.dell.com;"
+            "Database=Working_db;"
+            "Trusted_Connection=yes;")
+
+conn = pyodbc.connect(cnxn_str)
+
 
 cur = db.conn.cursor();
 
