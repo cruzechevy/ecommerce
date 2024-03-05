@@ -13,9 +13,9 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from services.user import users
-from services.order import orders
-from services.product import products
+from .services.user import users
+from .services.order import orders
+from .services.product import products
 from db.check_tables import check_tables
 from datetime import datetime
 
