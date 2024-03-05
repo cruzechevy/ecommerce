@@ -20,6 +20,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    # Add steps to install and configure the ODBC driver
+    - name: Install SQL Server Native Client 11.0 ODBC Driver
+      run: |
+        # Add commands to install the ODBC driver on Ubuntu
+        # For SQL Server Native Client 11.0, you might need to use unixODBC or a compatible driver
+
+    - name: Configure ODBC Driver
+      run: |
+        # Add commands to configure the ODBC driver
+        # Update the odbcinst.ini file to point to the driver library
+
+    - name: Set Environment Variables
+      run: |
+        export ODBCINI=/path/to/odbc.ini
+        export ODBCSYSINI=/path/to/odbcinst.ini
+
+    # Now run your tests
     - name: Run tests
       run: |
         pytest tests/
