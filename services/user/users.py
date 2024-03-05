@@ -1,4 +1,4 @@
-from db import db 
+from app.db import db 
 
 cur = db.conn.cursor()
 
